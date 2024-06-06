@@ -1,14 +1,20 @@
 #include <stdio.h>
 #include "Cfuncs.h"
+#include <string.h>
 
 int main() {
-    char* a = "Hello World";
+    char a[] = " Hel    l o ";
+    char* token;
     
     SizedCharArray testArray;
     testArray.array = a;
     testArray.size = 11;
 
-    printf("Value is: %lf\n", testArray.array[3]);
-    printf("Value in array?: %d\n", charIn(testArray, 'd'));
+    char** words = split(a, ' ');
 
+    int i = 0;
+    while (words[i] != NULL) {
+        printf("Word: '%s'\n", words[i]);
+        i++;
+    }
 }

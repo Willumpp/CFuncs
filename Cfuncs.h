@@ -55,4 +55,6 @@ BOOL floatIn(SizedFloatArray array, float value);
 BOOL doubleIn(SizedDoubleArray array, double value);
 BOOL charIn(SizedCharArray array, char value);
 
+char** split(char* string, char delimiter);
+
 #endif
