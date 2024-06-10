@@ -171,3 +171,29 @@ char** split(char* string, char delimiter) {
 
     return output;
 }
+
+/**
+ * Finds the FIRST occurance of a given phrase in a given string
+ * @param string String to search through
+ * @param phrase Phrase to search for
+ * @return Position of first occurance; -1 if phrase not in string
+*/
+int find(char* string, char* phrase) {
+
+    int i = 0;
+    int j = 0;
+    BOOL found = FALSE;
+    while (string[i] != '\0') {
+        if (phrase[j] == '\0') { found = TRUE; return i-j; }
+
+        if (phrase[j] == string[i]) {
+            j++;
+        }
+        else {
+            j = 0;
+        }
+        i++;
+    }
+
+    return -1;
+}

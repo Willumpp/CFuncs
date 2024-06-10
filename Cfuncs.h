@@ -56,5 +56,6 @@ BOOL doubleIn(SizedDoubleArray array, double value);
 BOOL charIn(SizedCharArray array, char value);
 
 char** split(char* string, char delimiter);
+int find(char* string, char* phrase);
 
 #endif
